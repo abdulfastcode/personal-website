@@ -44,7 +44,7 @@ const bwmss01 = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Arjun Jain – Portfolio",
   description: "",
 };
 
