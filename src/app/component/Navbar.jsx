@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Magnetic from "../common/Magnetic";
 import { Link as ScrollLink } from "react-scroll";
