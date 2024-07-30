@@ -13,16 +13,15 @@ import Alumni from "./component/Alumni/Alumni"
 
 
 export default function Home() {
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-
-          
-      }
-    )()
-  }, [])
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default as any;
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
+    })();
+  }, []);
 
  
   return (
