@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import { TracingBeam } from "./ui/tracing-beam";
+import { TracingBeam } from "./ui/TracingBeam";
 import AnchorElem from "../common/AnchorElem";
 // import { calsans } from "@/fonts/calsans";
 const Profession = () => {
