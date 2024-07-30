@@ -22,6 +22,53 @@ body {
   background-color: #000b2d;
 }
 
+.custom-clip_path{
+  clip-path: inset(50% 0 50%);
+
+  transition: clip-path .4s;
+}
+
+/* main_cta_button */
+.main_cta_button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color .3s;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: #000b2d;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.main_cta_button:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.main_cta_button:hover .button__icon-svg:first-child {
+  transition: transform .3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.main_cta_button:hover .button__icon-svg--copy {
+  transition: transform .3s ease-in-out .1s;
+  transform: translate(0);
+}
+/* end-main_cta_button */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
