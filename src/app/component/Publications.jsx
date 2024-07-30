@@ -1,7 +1,8 @@
+"use client";
 import Button from "../../app/common/Button";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import publication1 from "../../../public/research/publications/publication1.webp";
 import publication2 from "../../../public/research/publications/publication2.webp";
 import publication3 from "../../../public/research/publications/publication3.webp";
@@ -36,6 +37,7 @@ import publication31 from "../../../public/research/publications/publication31.w
 import RevealY from "../../app/common/RevealY";
 
 const Publications = () => {
+  const [shortPublicationList, setShortPublicationList] = useState([]);
   const publicationList = [
     {
       img: publication4,
@@ -458,34 +460,42 @@ const Publications = () => {
         "http://www.micc.unifi.it/publications/2008/BBJ08/ballan-demo_mm08.mov",
     },
   ];
+
+  console.log("shortPublicationList", shortPublicationList);
+
+  const handleShowMore = () => {
+    console.log("handleShowMoer");
+    // Create a set of image sources already added to shortPublicationList
+    const currentImages = new Set(shortPublicationList.map((pub) => pub.img));
+
+    // Filter the publicationList to get only those not already in shortPublicationList
+    const newPublications = publicationList.filter(
+      (pub) => !currentImages.has(pub.img)
+    );
+
+    // Add up to 4 new publications to shortPublicationList
+    setShortPublicationList((prevList) => [
+      ...prevList,
+      ...newPublications.slice(0, 4),
+    ]);
+
+    console.log("shortPublicationList", shortPublicationList);
+  };
+  useEffect(() => {
+    setShortPublicationList(publicationList.slice(0, 4));
+  }, []);
+
   return (
     <>
-      <h1 className="text-white text-5xl md:text-7xl lg:text-9xl 
-pl-2 py-10 md:p-10 font-aeonik">
+      <h1
+        className="text-white text-5xl md:text-7xl lg:text-9xl 
+pl-2 py-10 md:p-10 font-aeonik"
+      >
         Publications
       </h1>
 
       <div className="h-auto w-full flex flex-col gap-[70px] items-center">
-        {/* catagories */}
-        {/* <div className="flex gap-[15px] md:gap-[35px] items-center justify-center flex-wrap">
-        <div className="border border-[#082373] rounded-[30px] bg-[#00081F] px-[21px] py-[10px] text-lg font-bwmss01 text-white">
-          Category 1
-        </div>
-        <div className="border border-[#082373] rounded-[30px] bg-[#00081F] px-[21px] py-[10px] text-lg font-bwmss01 text-white">
-          Category 2
-        </div>
-        <div className="border border-[#082373] rounded-[30px] bg-[#00081F] px-[21px] py-[10px] text-lg font-bwmss01 text-white">
-          Category 3
-        </div>
-        <div className="border border-[#082373] rounded-[30px] bg-[#00081F] px-[21px] py-[10px] text-lg font-bwmss01 text-white">
-          Category 4
-        </div>
-        <div className="border border-[#082373] rounded-[30px] bg-[#00081F] px-[21px] py-[10px] text-lg font-bwmss01 text-white">
-          Category 5
-        </div>
-      </div> */}
-        {/* details */}
-        {publicationList.map((e, i) => (
+        {shortPublicationList.map((e, i) => (
           <RevealY key={i}>
             <div
               id={e?.idAttr}
@@ -566,6 +576,18 @@ pl-2 py-10 md:p-10 font-aeonik">
           </RevealY>
         ))}
       </div>
+      {shortPublicationList.length !== publicationList.length && (
+        <div className="w-full flex justify-center pt-[50px]">
+          <div
+            className="cursor-pointer rounded-[28px] relative z-[1] flex items-center gap-[7px] bg-gradient-to-br from-[#2DC1C3] to-[#0268F2] text-white p-[15px] text-lg w-[126px]"
+            onClick={() => {
+              handleShowMore();
+            }}
+          >
+            Show More
+          </div>
+        </div>
+      )}
     </>
   );
 };
