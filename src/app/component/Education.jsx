@@ -12,7 +12,7 @@ export const Education = () => {
         PROFESSION
       </h1>
       <TextParallaxContent
-        imgUrl="bg-fcai"
+        imgUrl="bg-fcai1 md:bg-fcai"
         subheading="September 2015 – Present"
         heading="Founder and CEO, Fast Code AI Consult Pvt. Ltd. Bangalore, India"
       >
@@ -27,7 +27,7 @@ export const Education = () => {
         /> */}
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="bg-uavio"
+        imgUrl="bg-uavio1 md:bg-uavio"
         subheading="March 2021 – Present"
         heading="Founder and Chief Scientist, UAVIO Labs Pvt. Ltd., Bangalore, India"
       >
@@ -48,14 +48,14 @@ export const Education = () => {
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="bg-perception_codes"
+        imgUrl="bg-perception_codes1 "
         subheading="Nov 2015 – Present"
         heading=" Co-founder at Perceptive Code, CA., USA"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="bg-apple"
+        imgUrl="bg-apple md:bg-apple1"
         subheading="July 2015 – Nov 2015"
         heading="Researcher at SPG, Apple, Cupertino"
       >
@@ -69,7 +69,7 @@ export const Education = () => {
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="bg-adv_tint"
+        imgUrl="bg-adv_tint md:bg-adv_tint1"
         subheading="Feb 2011 – May 2011"
         heading="Research Intern at Weta Digital Wellington, New Zealand "
       >
@@ -86,7 +86,7 @@ export const Education = () => {
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="bg-yahoo"
+        imgUrl="bg-yahoo md:bg-yahoo1"
         subheading="September 2006 – September 2007"
         heading="Software Developer at Yahoo India R & D, Bangalore, India"
       >
@@ -114,7 +114,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
       //   }}
       className="px-[22px] md:px-[42px] lg:px-[52px]"
     >
-      <div className="relative h-[150vh]">
+      <div className="relative  h-[100vh] md:h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
@@ -137,14 +137,16 @@ const StickyImage = ({ imgUrl }) => {
     <motion.div
       style={{
         // backgroundImage: `url(${imgUrl})`,
-        backgroundSize: "cover",
+
+        // backgroundSize: "contain",
         backgroundPosition: "center",
-        height: `calc(90vh - ${IMG_PADDING * 2}px)`,
+        // height: `calc(50vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
       }}
       ref={targetRef}
-      className={`sticky z-0 overflow-hidden rounded-3xl ${imgUrl}`}
+      className={`sticky bg-no-repeat z-0 overflow-hidden rounded-3xl bg-cover md:bg-cover ${imgUrl} 
+      h-[calc(60vh-64px)] md:h-[calc(90vh-64px)]`}
     >
       <motion.div
         className="absolute inset-0 bg-[#2429338a]"
@@ -173,7 +175,7 @@ const OverlayCopy = ({ subheading, heading }) => {
         opacity,
       }}
       ref={targetRef}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+      className="pt-[380px] md:pt-0 absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
     >
       <p className="mb-2 px-2 text-center text-xl md:mb-4 md:text-3xl font-bwmss01">
         {subheading}

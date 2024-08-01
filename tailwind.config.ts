@@ -13,26 +13,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
-          "max_inst":"url(/education/max_inst.jpg)",
-          "rvce":"url(/education/rvce.png)",
-          "saarland":"url(/education/saarland.jpeg)",
-          "research":"url(/profession/research.jpeg)",
-          "sde":"url(/profession/sde1.jpg)",
-          "apple":"url(/profession/apple1.webp)",
-          "desc":"url(/profession/desc.webp)",
-          "fcai":"url(/profession/fcai.jpg)",
-          "adv_tint":"url(/profession/adv_tint1.jpg)",
-          "yahoo":"url(/profession/yahoo1.png)",
-          "uavio":"url(/profession/uavio.png)",
-          "iitb":"url(/profession/iitb.jpg)",
-          "perception_codes":"url(/profession/perception_codes.jpg)",
-          "iisc":"url(/profession/iisc1.webp)",
+        "max_inst": "url(/education/max_inst.jpg)",
+        "rvce": "url(/education/rvce.png)",
+        "saarland": "url(/education/saarland.jpeg)",
+        "research": "url(/profession/research.jpeg)",
+        "sde": "url(/profession/sde1.jpg)",
+        "apple": "url(/profession/apple.webp)",
+        "apple1": "url(/profession/apple2.webp)",
+        "desc": "url(/profession/desc.webp)",
+        // "fcai":"url(/profession/fcai.jpg)",
+        "fcai1": "url(/profession/fcai1.jpeg)",
+        "fcai": "url(/profession/fcai.jpg)",
+        "adv_tint": "url(/profession/adv_tint.jpg)",
+        "adv_tint1": "url(/profession/adv_tint1.jpg)",
+        "yahoo": "url(/profession/yahoo.png)",
+        "yahoo1": "url(/profession/yahoo1.png)",
+        "uavio": "url(/profession/uavio.png)",
+        "uavio1": "url(/profession/uavio1.png)",
+        "iitb": "url(/profession/iitb.jpg)",
+        "perception_codes": "url(/profession/perception_codes.jpg)",
+        "perception_codes1": "url(/profession/perception_codes1.jpeg)",
+        "iisc": "url(/profession/iisc1.webp)",
       },
       fontFamily: {
         aeonik: ["var(--font-aeonik)"],
@@ -50,7 +57,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
