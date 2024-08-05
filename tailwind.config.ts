@@ -29,7 +29,7 @@ const config: Config = {
         "desc": "url(/profession/desc.webp)",
         // "fcai":"url(/profession/fcai.jpg)",
         "fcai1": "url(/profession/fcai1.jpeg)",
-        "fcai": "url(/profession/fcai.jpg)",
+        "fcai": "url(/profession/logo1.png)",
         "adv_tint": "url(/profession/adv_tint.jpg)",
         "adv_tint1": "url(/profession/adv_tint1.jpg)",
         "yahoo": "url(/profession/yahoo.png)",

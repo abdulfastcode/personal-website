@@ -12,7 +12,7 @@ export default function Descriptions({
   };
 
   return (
-    <div className="absolute top-[114px] md:top-[154px] lg:top-[208px] h-full w-full z-40 pointer-events-none">
+    <div className="absolute top-[114px] md:top-[154px] lg:top-[178px] h-full w-full z-40 pointer-events-none">
       {data.map((project, i) => {
         const { title, description, link } = project;
         return (

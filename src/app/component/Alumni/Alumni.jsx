@@ -107,7 +107,7 @@ export default function Alumni() {
 
     <div className=" w-full  lg:my-[120px] relative  z-30 ">
       <h1
-        className="text-white text-5xl md:text-7xl lg:text-9xl pl-2 pb-6 pt-10 md:p-10 font-aeonik"
+        className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 pb-6 pt-10 md:p-10 font-aeonik"
       >
         ALUMNI
       </h1>
