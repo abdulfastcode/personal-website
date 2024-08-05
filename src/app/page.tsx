@@ -1,5 +1,5 @@
 'use client';
-import LandingScreen from "./component/LandingScreen"
+import NewLandingScreen from "./component/NewLandingScreen"
 import About from "./component/About"
 import {Education} from "./component/Education"
 import Patents from "./component/Patents"
@@ -26,13 +26,13 @@ export default function Home() {
  
   return (
     <>
-    <LandingScreen/>
+    <NewLandingScreen/>
 
     <Element name="about" >
       <About/>
     </Element>
 
-    <Element name="profession" >
+    <Element name="education" >
     <Profession/>
     </Element>
 
@@ -40,7 +40,7 @@ export default function Home() {
       <Alumni/>
     </Element>
   
-    <Element name="education">
+    <Element name="profession">
       <Education/>
     </Element>
 

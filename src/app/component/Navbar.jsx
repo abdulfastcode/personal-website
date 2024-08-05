@@ -20,12 +20,13 @@ const Navbar = () => {
         </Magnetic>
         <Magnetic>
           <div className="flex flex-col relative z-10 p-[7px] md:p-[15px] cursor-pointer group">
-            <ScrollLink to="profession" smooth={true} duration={1000}>
-              Profession
+            <ScrollLink to="education" smooth={true} duration={1000}>
+              Education
             </ScrollLink>
             <div className="group-hover:scale-100 absolute w-[5px] h-[5px] top-[45px] left-[50%] bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76, 0, 0.24, 1)]"></div>
           </div>
         </Magnetic>
+       
         <Magnetic>
           <div className="flex flex-col relative z-10 p-[7px] md:p-[15px] cursor-pointer group">
             <ScrollLink to="alumni" smooth={true} duration={1000}>
@@ -36,8 +37,8 @@ const Navbar = () => {
         </Magnetic>
         <Magnetic>
           <div className="flex flex-col relative z-10 p-[7px] md:p-[15px] cursor-pointer group">
-            <ScrollLink to="education" smooth={true} duration={1000}>
-              Education
+            <ScrollLink to="profession" smooth={true} duration={1000}>
+              Profession
             </ScrollLink>
             <div className="group-hover:scale-100 absolute w-[5px] h-[5px] top-[45px] left-[50%] bg-white rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76, 0, 0.24, 1)]"></div>
           </div>

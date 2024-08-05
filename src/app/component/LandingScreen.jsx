@@ -39,7 +39,7 @@ const LandingScreen = () => {
   };
 
   return (
-      <main className="relative flex h-[100vh]  overflow-hidden">
+      <main className="relative flex h-[100dvh]  overflow-hidden">
         <div className="absolute z-10 w-full h-full bg-[#999d9e] inset-0"></div>
         <Image
           className="object-cover z-20"
