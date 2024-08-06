@@ -2,28 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../app/component/Navbar"
 import localFont from "next/font/local"
+import { DM_Sans } from 'next/font/google';
 
-const aeonik = localFont({
-  src: [
-    {
-      path: "../../public/fonts/aeonik/AeonikTRIAL-Light.woff2",
-      weight: "300", //light
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/aeonik/AeonikTRIAL-Regular.woff2",
-      weight: "400", //regular
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/aeonik/AeonikTRIAL-Bold.woff2",
-      weight: "700", //bold
-      style: "normal"
-    },
-
-  ],
-  variable: "--font-aeonik"
+const dmsans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300','400','700'],
+  variable: '--font-dmsans'
 })
+
+
 
 const bwmss01 = localFont({
   src: [
@@ -55,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${aeonik.variable} ${bwmss01.variable}`}>
+      <body className={`${dmsans.variable} ${bwmss01.variable}`}>
        <Navbar/>
         {children}</body>
     </html>

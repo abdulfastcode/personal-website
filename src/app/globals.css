@@ -22,6 +22,17 @@ body {
   background-color: #000b2d;
 }
 
+.arrow_up_gradient{
+  background: transparent linear-gradient(1turn,#05133e,#1c2d5f 0,#122153 51%,#081c61) 0 0 no-repeat padding-box;
+}
+
+.navbar_bg{
+  background: linear-gradient(to top, rgb(0, 8, 31) 0%, rgba(0, 0, 0, 0.57) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
 .custom-clip_path{
   clip-path: inset(50% 0 50%);
 

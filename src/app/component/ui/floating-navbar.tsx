@@ -1,20 +1,68 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Magnetic from "../common/Magnetic";
+import React, { useState,useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
-const Navbar = () => {
-  const header = useRef(null);
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { cn } from "../../../../lib/utils";
+import Link from "next/link";
+import Magnetic from "@/app/common/Magnetic";
+
+export const FloatingNav = ({
+  navItems,
+  className,
+}: {
+  navItems: {
+    name: string;
+    link: string;
+    icon?: JSX.Element;
+  }[];
+  className?: string;
+}) => {
+  const { scrollYProgress } = useScroll();
+
+  const [visible, setVisible] = useState(false);
+
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
+
+      if (scrollYProgress.get() < 0.005) {
+        setVisible(false);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
+
   return (
-    <div
-      style={{
-        background: `linear-gradient(to top, rgba(0, 8, 31)  0%, rgb(0, 0, 0 / 57%) 100%)`,
-        backdropFilter: `blur(20px)`,
-        WebkitBackdropFilter: `blur(20px)`,
-      }}
-      ref={header}
-      className="max-w-[92%] md:max-w-fit absolute flex  top-5 inset-x-0 mx-auto border border-white/[0.2] rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-30 font-bwmss01 text-neutral-50 py-2 px-2 md:px-8 md:py-2 justify-between  items-center"
-    >
-      <div className="w-full  justify-center flex flex-wrap items-center">
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className={cn(
+          "max-w-[92%] md:max-w-fit flex fixed top-5 inset-x-0 mx-auto border border-white/[0.2] rounded-full navbar_bg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] items-center justify-center font-bwmss01 text-neutral-50 py-2 px-2 md:px-8 md:py-2 space-x-4",
+          className
+        )}
+      >
+        <div className="w-full  justify-center flex flex-wrap items-center">
         <Magnetic>
           <div className="flex flex-col relative z-10 p-[7px] md:px-[15px] cursor-pointer group">
             <ScrollLink to="about" smooth={true} duration={1000}>
@@ -73,8 +121,11 @@ const Navbar = () => {
           </div>
         </Magnetic>
       </div>
-    </div>
+        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span>Login</span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button> */}
+      </motion.div>
+    </AnimatePresence>
   );
 };
-
-export default Navbar;

@@ -35,6 +35,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
+         
+
         "max_inst": "url(/education/max_inst.jpg)",
         "rvce": "url(/education/rvce.png)",
         "saarland": "url(/education/saarland.jpeg)",
@@ -58,7 +60,7 @@ const config: Config = {
         "iisc": "url(/profession/iisc1.webp)",
       },
       fontFamily: {
-        aeonik: ["var(--font-aeonik)"],
+        dmsans: ["var(--font-dmsans)"],
         bwmss01: ["var(--font-bwmss01)"],
       },
     },

@@ -8,13 +8,14 @@ import { FiArrowUpRight } from "react-icons/fi";
 export const Education = () => {
   return (
     <div className="bg-000b2d">
-      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 py-10 md:p-10 font-aeonik">
+      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 py-10 md:p-10 font-dmsans">
         PROFESSION
       </h1>
       <TextParallaxContent
         imgUrl="bg-fcai1 md:bg-fcai"
         subheading="September 2015 – Present"
-        heading="Founder and CEO, Fast Code AI Consult Pvt. Ltd. Bangalore, India" bgSize="bg-cover md:bg-contain"
+        heading="Founder and CEO, Fast Code AI Consult Pvt. Ltd. Bangalore, India"
+        bgSize="bg-cover md:bg-contain"
       >
         {/* <ExampleContent
           year=""
@@ -26,46 +27,52 @@ export const Education = () => {
           ]}
         /> */}
       </TextParallaxContent>
-     
+
       <TextParallaxContent
         imgUrl="bg-iisc"
         subheading="January 2020 – Present"
-        heading="Adjunct Faculty @ CDS Dept., IISc" bgSize="bg-cover md:bg-cover"
+        heading="Adjunct Faculty @ CDS Dept., IISc"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-iitb"
         subheading="Dec 2016 – May 2019"
-        heading="Adjunct Assistant Professor at CSE Dept., IIT Bombay" bgSize="bg-cover md:bg-cover"
+        heading="Adjunct Assistant Professor at CSE Dept., IIT Bombay"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-perception_codes1 "
         subheading="Nov 2015 – Present"
-        heading=" Co-founder at Perceptive Code, CA., USA" bgSize="bg-cover md:bg-cover"
+        heading=" Co-founder at Perceptive Code, CA., USA"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-apple md:bg-apple1"
         subheading="July 2015 – Nov 2015"
-        heading="Researcher at SPG, Apple, Cupertino" bgSize="bg-cover md:bg-cover"
+        heading="Researcher at SPG, Apple, Cupertino"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-desc"
         subheading="March 2013 – Feb 2015"
-        heading="Post-doc at Courant Institute, NYU with Chris Bregler and Yann LeCun" bgSize="bg-cover md:bg-cover"
+        heading="Post-doc at Courant Institute, NYU with Chris Bregler and Yann LeCun"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-adv_tint md:bg-adv_tint1"
         subheading="Feb 2011 – May 2011"
-        heading="Research Intern at Weta Digital Wellington, New Zealand " bgSize="bg-cover md:bg-cover"
+        heading="Research Intern at Weta Digital Wellington, New Zealand "
+        bgSize="bg-cover md:bg-cover"
       >
         <ExampleContent
           year="Feature film credits:"
@@ -75,21 +82,24 @@ export const Education = () => {
       <TextParallaxContent
         imgUrl="bg-research"
         subheading="October 2007 – August 2008"
-        heading="Research Assistant at Media Integration and Communication Center (MICC), University of Florence, Florence, Italy" bgSize="bg-cover md:bg-cover"
+        heading="Research Assistant at Media Integration and Communication Center (MICC), University of Florence, Florence, Italy"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-yahoo md:bg-yahoo1"
         subheading="September 2006 – September 2007"
-        heading="Software Developer at Yahoo India R & D, Bangalore, India" bgSize="bg-cover md:bg-cover"
+        heading="Software Developer at Yahoo India R & D, Bangalore, India"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-sde"
         subheading="July 2005 – August 2006"
-        heading="Software Developer at Pi Corporation (now Decho), Bangalore, India" bgSize="bg-cover md:bg-cover"
+        heading="Software Developer at Pi Corporation (now Decho), Bangalore, India"
+        bgSize="bg-cover md:bg-cover"
       >
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
@@ -99,7 +109,13 @@ export const Education = () => {
 
 const IMG_PADDING = 32;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children,bgSize }) => {
+const TextParallaxContent = ({
+  imgUrl,
+  subheading,
+  heading,
+  children,
+  bgSize,
+}) => {
   return (
     <div
       //   style={{
@@ -109,7 +125,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children,bgSize }) =
       className="px-[22px] md:px-[42px] lg:px-[52px]"
     >
       <div className="relative  h-[100vh] md:h-[150vh]">
-        <StickyImage imgUrl={imgUrl} bgSize={bgSize}/>
+        <StickyImage imgUrl={imgUrl} bgSize={bgSize} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
       {children}
@@ -117,7 +133,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children,bgSize }) =
   );
 };
 
-const StickyImage = ({ imgUrl,bgSize }) => {
+const StickyImage = ({ imgUrl, bgSize }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -174,7 +190,7 @@ const OverlayCopy = ({ subheading, heading }) => {
       <p className="mb-2 px-2 text-center text-xl md:mb-4 md:text-3xl font-bwmss01">
         {subheading}
       </p>
-      <p className="text-center px-2 md:px-6 text-4xl font-bold md:text-7xl font-aeonik">
+      <p className="text-center px-2 md:px-6 text-4xl font-bold md:text-7xl font-dmsans">
         {heading}
       </p>
     </motion.div>

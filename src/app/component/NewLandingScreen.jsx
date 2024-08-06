@@ -82,7 +82,7 @@ const NewLandingScreen = () => {
   ];
   return (
     <div className="w-full h-[100vh] bg-[#000b2d] flex justify-center items-center flex-col gap-[30px] relative overflow-hidden">
-         <Spotlight
+      <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
@@ -97,7 +97,7 @@ const NewLandingScreen = () => {
         />
       </div>
       <div className="relative z-20 flex items-center  flex-col gap-[20px]">
-        <h1 className="text-white font-aeonik  text-6xl md:text-8xl text-center">
+        <h1 className="text-white font-dmsans  text-6xl md:text-8xl text-center">
           Arjun Jain
         </h1>
         <h3 className="text-white font-bwmss01 text-2xl md:text-4xl text-center">

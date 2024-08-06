@@ -4,15 +4,35 @@ import About from "./component/About"
 import {Education} from "./component/Education"
 import Patents from "./component/Patents"
 import Publications from "./component/Publications"
+import ArrowUpButton from "./component/ArrowUpButton"
 import Contact from "./component/Contact"
 import Profession from "./component/Profession"
 import { useEffect } from 'react'
 import { Element } from 'react-scroll';
 import Teaching from "./component/Teaching/Teaching"
 import Alumni from "./component/Alumni/Alumni"
+import { FloatingNav } from "./component/ui/floating-navbar";
 
 
 export default function Home() {
+
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      
+    },
+    {
+      name: "About",
+      link: "/about",
+      
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+     
+    },
+  ];
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default as any;
@@ -26,6 +46,7 @@ export default function Home() {
  
   return (
     <>
+    <FloatingNav navItems={navItems} />
     <NewLandingScreen/>
 
     <Element name="about" >
@@ -56,7 +77,7 @@ export default function Home() {
       <Contact/>
     </Element>
 
-   
+   <ArrowUpButton/>
     
     </>
 

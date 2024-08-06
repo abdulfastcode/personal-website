@@ -39,33 +39,32 @@ const LandingScreen = () => {
   };
 
   return (
-      <main className="relative flex h-[100dvh]  overflow-hidden">
-        <div className="absolute z-10 w-full h-full bg-[#999d9e] inset-0"></div>
-        <Image
-          className="object-cover z-20"
-          src="/Arjun-1.png"
-          fill={true}
-          alt="background"
-        />
+    <main className="relative flex h-[100dvh]  overflow-hidden">
+      <div className="absolute z-10 w-full h-full bg-[#999d9e] inset-0"></div>
+      <Image
+        className="object-cover z-20"
+        src="/Arjun-1.png"
+        fill={true}
+        alt="background"
+      />
 
-        <div className="absolute z-20 top-[calc(100vh-250px)] md:top-[calc(100vh-300px)] lg:top-[calc(100vh-350px)]" 
-        >
-          <div ref={slider} className="relative whitespace-nowrap">
-            <p
-              className="relative font-aeonik m-0 text-white text-[90px] md:text-[130px] lg:text-[240px] tracking-normal font-bold pr-[50px]"
-              ref={firstText}
-            >
-              Founder & Chief Scientist -
-            </p>
-            <p
-              className="absolute font-aeonik left-full top-0 m-0 text-white text-[90px] md:text-[130px] lg:text-[240px] tracking-normal font-bold pr-[50px]"
-              ref={secondText}
-            >
-              Founder & Chief Scientist -
-            </p>
-          </div>
+      <div className="absolute z-20 top-[calc(100vh-250px)] md:top-[calc(100vh-300px)] lg:top-[calc(100vh-350px)]">
+        <div ref={slider} className="relative whitespace-nowrap">
+          <p
+            className="relative font-dmsans m-0 text-white text-[90px] md:text-[130px] lg:text-[240px] tracking-normal font-bold pr-[50px]"
+            ref={firstText}
+          >
+            Founder & Chief Scientist -
+          </p>
+          <p
+            className="absolute font-dmsans left-full top-0 m-0 text-white text-[90px] md:text-[130px] lg:text-[240px] tracking-normal font-bold pr-[50px]"
+            ref={secondText}
+          >
+            Founder & Chief Scientist -
+          </p>
         </div>
-      </main>
+      </div>
+    </main>
   );
 };
 

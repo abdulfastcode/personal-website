@@ -4,7 +4,7 @@ import {
   motion,
   useTransform,
   useMotionTemplate,
-} from "framer-motion"; 
+} from "framer-motion";
 
 export default function Titles({ data, setSelectedProject }) {
   return (
@@ -17,7 +17,7 @@ export default function Titles({ data, setSelectedProject }) {
             setSelectedProject={setSelectedProject}
           />
         );
-      })} 
+      })}
     </div>
   );
 }
@@ -41,27 +41,24 @@ function Title({ data, setSelectedProject }) {
       onMouseEnter={() => {
         setSelectedProject(i);
       }}
-      onTouchStart={()=>{
+      onTouchStart={() => {
         setSelectedProject(i);
       }}
       onMouseLeave={() => {
         setSelectedProject(null);
       }}
     >
-      <div
-        className="inline-block pl-[5%] md:pl-[10%]"
-       
-      >
-        <motion.p 
-        style={{ clipPath: clip }}
-        className="font-aeonik inline-block text-[#ffffffb1] uppercase font-bold  text-[5vw] md:text-[5vw] lg:text-[5vw]   m-0 relative z-20 select-none"
-      >
-        {title}
-      </motion.p>
-      
-      <p className="font-aeonik absolute top-0  text-[#11204c] uppercase font-bold text-[5vw] md:text-[5vw] lg:text-[5vw]  m-0 z-10  h-full flex items-center select-none">
-        {title}
-      </p>
+      <div className="inline-block pl-[5%] md:pl-[10%]">
+        <motion.p
+          style={{ clipPath: clip }}
+          className="font-dmsans inline-block text-[#ffffffb1] uppercase font-bold  text-[5vw] md:text-[5vw] lg:text-[4.5vw]   m-0 relative z-20 select-none"
+        >
+          {title}
+        </motion.p>
+
+        <p className="font-dmsans absolute top-0  text-[#11204c] uppercase font-bold text-[5vw] md:text-[5vw] lg:text-[4.5vw]  m-0 z-10  h-full flex items-center select-none">
+          {title}
+        </p>
       </div>
     </div>
   );

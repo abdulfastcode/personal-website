@@ -70,8 +70,10 @@ const Patents = () => {
   ];
   return (
     <>
-      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl 
-pl-2 py-10 md:p-10 font-aeonik ">
+      <h1
+        className="text-white text-5xl md:text-7xl lg:text-8xl 
+pl-2 py-10 md:p-10 font-dmsans "
+      >
         Patents
       </h1>
       <div className="h-auto w-full flex flex-col gap-[70px] items-center">
@@ -127,7 +129,7 @@ pl-2 py-10 md:p-10 font-aeonik ">
                   </div>
                   {/* body */}
                   <div>
-                    <h5 className="text-white font-aeonik font-light tracking-normal text-[30px]">
+                    <h5 className="text-white font-dmsans font-light tracking-normal text-[30px]">
                       {e.title}
                     </h5>
                     <p className="text-[#9EB3CF] font-bwmss01 text-lg mt-[20px]">

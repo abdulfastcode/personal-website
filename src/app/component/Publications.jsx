@@ -489,7 +489,7 @@ const Publications = () => {
     <>
       <h1
         className="text-white text-5xl md:text-7xl lg:text-8xl 
-pl-2 py-10 md:p-10 font-aeonik"
+pl-2 py-10 md:p-10 font-dmsans"
       >
         Publications
       </h1>
@@ -530,7 +530,7 @@ pl-2 py-10 md:p-10 font-aeonik"
                   </div>
                   {/* body */}
                   <div>
-                    <h5 className="text-white font-aeonik font-light tracking-normal text-[30px]">
+                    <h5 className="text-white font-dmsans font-light tracking-normal text-[30px]">
                       {e.desciption}
                     </h5>
                   </div>

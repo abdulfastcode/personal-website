@@ -189,9 +189,7 @@ const Profession = () => {
       title: "October 2008 – August 2009",
       description: (
         <>
-          <p className="font-semibold">
-          Graduated from University of Saarland
-          </p>
+          <p className="font-semibold">Graduated from University of Saarland</p>
         </>
       ),
     },
@@ -200,7 +198,8 @@ const Profession = () => {
       description: (
         <>
           <p className="font-semibold">
-          Bachelor of Engineering in Computer Science from R.V. College of Engineering, Bangalore, India.
+            Bachelor of Engineering in Computer Science from R.V. College of
+            Engineering, Bangalore, India.
           </p>
         </>
       ),
@@ -208,7 +207,7 @@ const Profession = () => {
   ];
   return (
     <div>
-      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 pt-16 pb-6 md:p-10 font-aeonik ">
+      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 pt-16 pb-6 md:p-10 font-dmsans ">
         EDUCATION
       </h1>
       <TracingBeam className="px-6">
@@ -218,7 +217,7 @@ const Profession = () => {
               key={`content-${index}`}
               className="mb-7 pl-[20px] sm:pl-[30px] md:pl-0 md:mb-10"
             >
-              <h1 className="font-aeonik text-2xl md:text-3xl lg:text-4xl text-white">
+              <h1 className="font-dmsans text-2xl md:text-3xl lg:text-4xl text-white">
                 {item.title}
               </h1>
 

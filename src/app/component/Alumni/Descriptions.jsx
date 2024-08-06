@@ -27,7 +27,7 @@ export default function Descriptions({
             }}
             onMouseEnter={() => setSelectedProject(i)}
           >
-            <p className="text-[#fff] font-aeonik uppercase font-bold text-[5vw] md:text-[5vw] lg:text-[5vw] m-0 relative z-10">
+            <p className="text-[#fff] font-dmsans uppercase font-bold text-[5vw] md:text-[5vw] lg:text-[4.5vw] m-0 relative z-10">
               {crop(title, 9)}
             </p>
             <a

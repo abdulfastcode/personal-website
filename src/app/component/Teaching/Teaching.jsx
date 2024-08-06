@@ -40,7 +40,7 @@ export default function Teaching() {
     <div className=" w-full relative mb-[70px] z-30 ">
       <h1
         className="text-white text-5xl md:text-7xl lg:text-9xl 
-pl-2 py-10 md:p-10 font-aeonik"
+pl-2 py-10 md:p-10 font-dmsans"
       >
         TEACHING
       </h1>
