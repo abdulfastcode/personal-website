@@ -4,7 +4,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 // import max_inst from "../../../public/education/max_inst.jpg"
 // import rvce from "../../../public/education/rvce.png"
 // import saarland from "../../../public/education/saarland.jpeg"
-
+ 
 export const Education = () => {
   return (
     <div className="bg-000b2d">
