@@ -81,7 +81,7 @@ const NewLandingScreen = () => {
     },
   ];
   return (
-    <div className="w-full h-[100vh] bg-[#000b2d] flex justify-center items-center flex-col gap-[30px] relative overflow-hidden">
+    <div className="w-full h-[100vh] bg-[#000b2d] flex justify-center items-center flex-col gap-[10px] relative overflow-hidden">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -112,7 +112,7 @@ const NewLandingScreen = () => {
           </LinkPreview>
         </h3>
       </div>
-      <div className="relative z-20 flex gap-[20px] justify-center items-center mt-[20px] flex-wrap">
+      <div className="relative z-20 flex gap-[20px] justify-center items-center mt-[30px] flex-wrap">
         <AnimatedTooltip items={items} />
       </div>
       {/* <BackgroundBeams /> */}
