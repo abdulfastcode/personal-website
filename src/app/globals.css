@@ -23,7 +23,9 @@ body {
 }
 
 .arrow_up_gradient{
-  background: transparent linear-gradient(#05133e,#1c2d5f 0,#122153 51%,#081c61) 0 0 no-repeat padding-box;
+  /* background: transparent linear-gradient(#05133e,#1c2d5f 0,#122153 51%,#081c61) 0 0 no-repeat padding-box; */
+  background: transparent linear-gradient(360deg, #05133e,#1c2d5f 0,#122153 51%,#081c61) 0 0 no-repeat padding-box;
+  
 }
 
 .navbar_bg{
