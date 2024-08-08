@@ -10,6 +10,7 @@ type SpotlightProps = {
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
     const svgElem = useRef(null);
     const isInView = useInView(svgElem);
+    console.log("spotlightIsInview",isInView)
   return (
     <svg
     ref={svgElem}

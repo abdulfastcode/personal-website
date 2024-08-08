@@ -12,14 +12,10 @@ import Link from "next/link";
 import Magnetic from "@/app/common/Magnetic";
 
 export const FloatingNav = ({
-  navItems,
+  
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();

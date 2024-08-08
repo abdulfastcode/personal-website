@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmsans.variable} ${bwmss01.variable}`}>
-       <Navbar/>
+     
         {children}</body>
     </html>
   );

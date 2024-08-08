@@ -11,28 +11,19 @@ import { useEffect } from 'react'
 import { Element } from 'react-scroll';
 import Teaching from "./component/Teaching/Teaching"
 import Alumni from "./component/Alumni/Alumni"
-import { FloatingNav } from "./component/ui/floating-navbar";
+// import { FloatingNav } from "./component/ui/floating-navbar";
+import dynamic from 'next/dynamic';
 
+const FloatingNav = dynamic(() =>
+  import('./component/ui/floating-navbar').then(mod => mod.FloatingNav), {
+    
+    ssr: false, // Disable server-side rendering if the component should only be loaded on the client side
+  }
+);
 
 export default function Home() {
 
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-      
-    },
-    {
-      name: "About",
-      link: "/about",
-      
-    },
-    {
-      name: "Contact",
-      link: "/contact",
-     
-    },
-  ];
+ 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default as any;
@@ -46,7 +37,8 @@ export default function Home() {
  
   return (
     <>
-    <FloatingNav navItems={navItems} />
+    <FloatingNav />
+
     <NewLandingScreen/>
 
     <Element name="about" >

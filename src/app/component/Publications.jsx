@@ -488,7 +488,7 @@ const Publications = () => {
   return (
     <>
       <h1
-        className="text-white text-5xl md:text-7xl lg:text-8xl 
+        className="text-white text-5xl md:text-7xl lg:text-7xl 
 pl-2 py-10 md:p-10 font-dmsans"
       >
         Publications

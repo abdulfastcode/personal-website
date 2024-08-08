@@ -4,7 +4,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 
 const About = () => {
-  const phrase = `Founder and Chief Scientist of Fast Code AI and holds a Ph.D. in Computer Science from the Max-Planck Institute for Informatics, Germany. His research intersects computer graphics, vision, and machine learning. Also serves as an Adjunct Faculty in the CDS department at IISc, where he leads a deep learning research group. He has an extensive teaching and professional background, having taught Computer Vision at IIT Bombay and worked with companies like Yahoo!, Weta Digital, and Apple. `;
+  const phrase = ` I am the Founder and Chief Scientist of Fast Code AI and hold a Ph.D. in Computer Science from the Max-Planck Institute for Informatics in Germany. My research intersects computer graphics, vision, and machine learning. I also serve as an Adjunct Faculty member in the CDS department at IISc, where I lead a deep learning research group. With an extensive teaching and professional background, I have taught Computer Vision at IIT Bombay and worked with companies like Yahoo!, Weta Digital, and Apple.`;
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -38,22 +38,19 @@ const About = () => {
   };
   return (
     <div className="w-full bg-[#000b2d] text-white  md:pb-[80px] lg:pb-[100px]">
-      <h1 className="text-white md:hidden text-5xl md:text-7xl lg:text-8xl pl-2 pb-5  font-dmsans">
+      <h1 className="text-white text-5xl md:text-7xl lg:text-7xl pl-2 pb-5 md:p-10 font-dmsans">
         About Me
       </h1>
       <div data-scroll data-scroll-speed={0.1}>
-        <RoundedButton className=" hidden md:flex top-[-10px] md:top-[-25px] lg:top-[-100px] md:left-[100px] w-[140px] lg:w-[180px] h-[140px] lg:h-[180px] bg-[#202e5b] text-white rounded-full absolute  items-center justify-center cursor-pointer ">
-          <p className="m-0 text-[16px] font-light relative z-10 font-bwmss01">
-            About me
-          </p>
-        </RoundedButton>
-        {/* <p className="block max-w-[150px] top-[80px] left-[20px] md:hidden m-0 text-[16px] font-light relative z-10 font-bwmss01">
+        <RoundedButton className=" hidden  top-[-10px] md:top-[-25px] lg:top-[-100px] md:left-[100px] w-[140px] lg:w-[180px] h-[140px] lg:h-[180px] bg-[#202e5b] text-white rounded-full absolute  items-center justify-center cursor-pointer ">
+          {/* <p className="m-0 text-[16px] font-light relative z-10 font-bwmss01">
             About me
           </p> */}
+        </RoundedButton>
       </div>
       <div
         ref={description}
-        className="pl-[30px] pr-[20px] md:pl-[268px] lg:pl-[300px] md:pr-[100px] md:mt-[50px] md:mt-[100px] lg:mt-[200px] flex justify-center font-dmsans"
+        className="pl-[30px] pr-[20px] md:pl-[68px] lg:pl-[80px] md:pr-[100px]   flex justify-center font-dmsans"
       >
         <div className="max-w-[1400px] flex gap-[50px] relative ">
           <p className="m-0 text-[22px] md:text-[26px] lg:text-[36px] gap-[8px] leading-[1.3] ">

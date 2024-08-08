@@ -12,7 +12,7 @@ const Navbar = () => {
         WebkitBackdropFilter: `blur(20px)`,
       }}
       ref={header}
-      className="max-w-[92%] md:max-w-fit absolute flex  top-5 inset-x-0 mx-auto border border-white/[0.2] rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-30 font-bwmss01 text-neutral-50 py-2 px-2 md:px-8 md:py-2 justify-between  items-center"
+      className="max-w-[92%] md:max-w-fit md:absolute flex  md:top-5 inset-x-0 mx-auto border border-white/[0.2] rounded-full  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-30 font-bwmss01 text-neutral-50 py-2 px-2 md:px-8 md:py-2 justify-between  items-center"
     >
       <div className="w-full  justify-center flex flex-wrap items-center">
         <Magnetic>

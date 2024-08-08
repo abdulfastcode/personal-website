@@ -207,8 +207,8 @@ const Profession = () => {
   ];
   return (
     <div>
-      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 pt-16 pb-6 md:p-10 font-dmsans ">
-        EDUCATION
+      <h1 className="text-white text-5xl md:text-7xl lg:text-7xl pl-2 pt-16 pb-6 md:p-10 font-dmsans ">
+        Education
       </h1>
       <TracingBeam className="px-6">
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">

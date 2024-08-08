@@ -4,18 +4,19 @@ import { FiArrowUpRight } from "react-icons/fi";
 // import max_inst from "../../../public/education/max_inst.jpg"
 // import rvce from "../../../public/education/rvce.png"
 // import saarland from "../../../public/education/saarland.jpeg"
- 
+
 export const Education = () => {
   return (
     <div className="bg-000b2d">
-      <h1 className="text-white text-5xl md:text-7xl lg:text-8xl pl-2 py-10 md:p-10 font-dmsans">
-        PROFESSION
+      <h1 className="text-white text-5xl md:text-7xl lg:text-7xl pl-2 py-10 md:p-10 font-dmsans">
+        Profession
       </h1>
       <TextParallaxContent
         imgUrl="bg-fcai1 md:bg-fcai"
-        subheading="September 2015 – Present"
+        yearSpend="Sept 2015 – Present"
         heading="Founder and CEO, Fast Code AI Consult Pvt. Ltd. Bangalore, India"
-        bgSize="bg-cover md:bg-contain"
+        bgSize="bg-cover "
+        role="Founder and CEO"
       >
         {/* <ExampleContent
           year=""
@@ -30,76 +31,68 @@ export const Education = () => {
 
       <TextParallaxContent
         imgUrl="bg-iisc"
-        subheading="January 2020 – Present"
+        yearSpend="Jan 2020 – Present"
         heading="Adjunct Faculty @ CDS Dept., IISc"
         bgSize="bg-cover md:bg-cover"
+        role="Adjunct Faculty"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-iitb"
-        subheading="Dec 2016 – May 2019"
+        yearSpend="Dec 2016 – May 2019"
         heading="Adjunct Assistant Professor at CSE Dept., IIT Bombay"
         bgSize="bg-cover md:bg-cover"
+        role="Adjunct Assistant Professor"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl="bg-perception_codes1 "
-        subheading="Nov 2015 – Present"
-        heading=" Co-founder at Perceptive Code, CA., USA"
-        bgSize="bg-cover md:bg-cover"
-      >
-        {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
-      </TextParallaxContent>
+
       <TextParallaxContent
         imgUrl="bg-apple md:bg-apple1"
-        subheading="July 2015 – Nov 2015"
+        yearSpend="July 2015 – Nov 2015"
         heading="Researcher at SPG, Apple, Cupertino"
         bgSize="bg-cover md:bg-cover"
+        role="Researcher"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-desc"
-        subheading="March 2013 – Feb 2015"
+        yearSpend="March 2013 – Feb 2015"
         heading="Post-doc at Courant Institute, NYU with Chris Bregler and Yann LeCun"
         bgSize="bg-cover md:bg-cover"
+        role="Post-Doc"
       >
         {/* <ExampleContent year="June 2001 – July 2005" thesis={[]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-adv_tint md:bg-adv_tint1"
-        subheading="Feb 2011 – May 2011"
-        heading="Research Intern at Weta Digital Wellington, New Zealand "
+        yearSpend="Feb 2011 – May 2011"
+        heading={`Research Intern at Weta Digital Wellington, New Zealand. \n Feature film credits: The Adventures of Tintin(2011) – R & D Developer`}
         bgSize="bg-cover md:bg-cover"
+        role="Research Intern"
       >
-        <ExampleContent
+        {/* <ExampleContent
           year="Feature film credits:"
           thesis={["The Adventures of Tintin(2011) – R & D Developer"]}
-        />
+        /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-research"
-        subheading="October 2007 – August 2008"
+        yearSpend="Oct 2007 – Aug 2008"
         heading="Research Assistant at Media Integration and Communication Center (MICC), University of Florence, Florence, Italy"
         bgSize="bg-cover md:bg-cover"
+        role="Research Assistant"
       >
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="bg-yahoo md:bg-yahoo1"
-        subheading="September 2006 – September 2007"
+        yearSpend="Sept 2006 – Sept 2007"
         heading="Software Developer at Yahoo India R & D, Bangalore, India"
         bgSize="bg-cover md:bg-cover"
-      >
-        {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl="bg-sde"
-        subheading="July 2005 – August 2006"
-        heading="Software Developer at Pi Corporation (now Decho), Bangalore, India"
-        bgSize="bg-cover md:bg-cover"
+        role="Software Developer"
       >
         {/* <ExampleContent year="Feature film credits:" thesis={["The Adventures of Tintin(2011) – R & D Developer"]} /> */}
       </TextParallaxContent>
@@ -111,10 +104,11 @@ const IMG_PADDING = 32;
 
 const TextParallaxContent = ({
   imgUrl,
-  subheading,
+  yearSpend,
   heading,
   children,
   bgSize,
+  role
 }) => {
   return (
     <div
@@ -122,11 +116,11 @@ const TextParallaxContent = ({
       //     paddingLeft: IMG_PADDING,
       //     paddingRight: IMG_PADDING,
       //   }}
-      className="px-[22px] md:px-[42px] lg:px-[52px]"
+      className="px-[22px] md:px-[42px] lg:px-[52px] "
     >
-      <div className="relative  h-[100vh] md:h-[150vh]">
+      <div className="relative h-[auto] pb-[60px] md:pb-[80px] lg:pb-0 lg:h-[95vh]  ">
         <StickyImage imgUrl={imgUrl} bgSize={bgSize} />
-        <OverlayCopy heading={heading} subheading={subheading} />
+        <OverlayCopy heading={heading} yearSpend={yearSpend} role={role} />
       </div>
       {children}
     </div>
@@ -155,11 +149,11 @@ const StickyImage = ({ imgUrl, bgSize }) => {
         scale,
       }}
       ref={targetRef}
-      className={`sticky bg-no-repeat z-0 overflow-hidden rounded-3xl ${bgSize} ${imgUrl} 
-      h-[calc(60vh-64px)] ]`}
+      className={` bg-no-repeat z-0 overflow-hidden rounded-3xl ${bgSize} ${imgUrl} 
+      h-[calc(60vh-64px)] md:h-[calc(80vh-64px)] `}
     >
       <motion.div
-        className="absolute inset-0 bg-[#2429338a]"
+        className="absolute inset-0 bg-[#2429338a] rounded-3xl"
         style={{
           opacity,
         }}
@@ -168,37 +162,43 @@ const StickyImage = ({ imgUrl, bgSize }) => {
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
+const OverlayCopy = ({ yearSpend, heading,role }) => {
+  // const targetRef = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: targetRef,
+  //   offset: ["start end", "end start"],
+  // });
 
-  const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.7], [0, 1, 0]);
+  // const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+  // const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.7], [0, 1, 0]);
 
   return (
     <motion.div
-      style={{
-        y,
-        opacity,
-      }}
-      ref={targetRef}
-      className="pt-[380px] md:pt-[350px] absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+      // style={{
+      //   y,
+      //   opacity,
+      // }}
+      // ref={targetRef}
+      className="pt-[20px] flex flex-col lg:flex-row  w-full pl-5 lg:pl-0 items-start md:pl-10 text-white gap-[20px]  "
     >
-      <p className="mb-2 px-2 text-center text-xl md:mb-4 md:text-3xl font-bwmss01">
-        {subheading}
-      </p>
-      <p className="text-center px-2 md:px-6 text-4xl font-bold md:text-7xl font-dmsans">
-        {heading}
-      </p>
+      <div className="flex flex-row-reverse lg:flex-row items-center justify-between lg:justify-normal w-[95%] lg:w-auto">
+        <p className="pl-6 text-sm text-gray-400 lg:font-thin  md:pl-4">{yearSpend}</p>
+        <p className=" lg:pl-6 text-white font-bold text-xl  md:text-3xl lg:text-[2rem] font-dmsans ">
+          {role}
+          {/* Founder And CEO */}
+        </p>
+      </div>
+      <div className="w-[80%] lg:max-w-[50%]">
+        <p className="pl-1 lg:pl-12 text-slate-300 font-bwmss01 lg:pt-[8px]">
+         {heading}
+        </p>
+      </div>
     </motion.div>
   );
 };
 
 const ExampleContent = ({ year, thesis }) => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24  md:grid-cols-12">
     <h2 className="col-span-1 text-white text-3xl font-bold md:col-span-4">
       {year}
     </h2>
