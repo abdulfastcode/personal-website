@@ -141,7 +141,7 @@ pl-2 py-10 md:p-10 font-dmsans "
                     {e.linkTo.length > 1 && (
                       <Link target={"_blank"} href={e.linkTo}>
                         <div
-                          className="border border-[#F3F3F3] p-[12px] cursor-pointer text-white rounded-full font-bwmss01 font-light min-h-[55px] pt-[17px] min-w-[120px] text-center"
+                          className="border border-[#F3F3F3] p-[12px] cursor-pointer text-white rounded-full font-bwmss01 font-light min-h-[55px] pt-[14px] min-w-[120px] text-center"
                           style={{
                             background:
                               "transparent linear-gradient(360deg, #13224F 0%, #13224F 0%, #0C1C46 51%, #020F3B 100%) 0% 0% no-repeat padding-box",
