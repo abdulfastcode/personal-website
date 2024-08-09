@@ -35,7 +35,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
-         
+
 
         "max_inst": "url(/education/max_inst.jpg)",
         "rvce": "url(/education/rvce.png)",
@@ -44,7 +44,7 @@ const config: Config = {
         "sde": "url(/profession/sde1.jpg)",
         "apple": "url(/profession/apple-2.png)",
         "apple1": "url(/profession/apple-2.png)",
-        "desc": "url(/profession/desc.webp)",
+        "desc": "url(/profession/desc.jpeg)",
         // "fcai":"url(/profession/fcai.jpg)",
         "fcai1": "url(/profession/fcai1.jpeg)",
         "fcai": "url(/profession/fcailogo1.jpg)",
@@ -54,7 +54,7 @@ const config: Config = {
         "yahoo1": "url(/profession/yahoo1.png)",
         "uavio": "url(/profession/uavio.png)",
         "uavio1": "url(/profession/uavio1.png)",
-        "iitb": "url(/profession/iitb.jpg)",
+        "iitb": "url(/profession/iitb.webp)",
         "perception_codes": "url(/profession/perception_codes.jpg)",
         "perception_codes1": "url(/profession/perception_codes1.jpeg)",
         "iisc": "url(/profession/iisc-2.jpeg)",

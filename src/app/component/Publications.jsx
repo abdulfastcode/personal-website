@@ -35,6 +35,7 @@ import publication29 from "../../../public/research/publications/publication29.w
 import publication30 from "../../../public/research/publications/publication30.webp";
 import publication31 from "../../../public/research/publications/publication31.webp";
 import RevealY from "../../app/common/RevealY";
+import Magnetic from "../common/Magnetic";
 
 const Publications = () => {
   const [shortPublicationList, setShortPublicationList] = useState([]);
@@ -578,14 +579,18 @@ pl-2 py-10 md:p-10 font-dmsans"
       </div>
       {shortPublicationList.length !== publicationList.length && (
         <div className="w-full flex justify-center pt-[50px]">
+          <Magnetic>
           <div
-            className="cursor-pointer rounded-[28px] relative z-[1] flex items-center gap-[7px] bg-gradient-to-br from-[#2DC1C3] to-[#0268F2] text-white p-[15px] text-lg w-[126px]"
+            className="cursor-pointer rounded-[28px] relative z-[1] flex items-center gap-[7px] bg-gradient-to-br from-[#2DC1C3] to-[#0268F2] text-white p-[15px] text-lg w-[126px] group"
             onClick={() => {
               handleShowMore();
             }}
           >
             Show More
+           
           </div>
+          </Magnetic>
+         
         </div>
       )}
     </>

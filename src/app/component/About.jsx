@@ -50,7 +50,7 @@ const About = () => {
       </div>
       <div
         ref={description}
-        className="pl-[30px] pr-[20px] md:pl-[68px] lg:pl-[80px] md:pr-[100px]   flex justify-center font-dmsans"
+        className="pl-[30px] pr-[30px] md:pl-[68px] md:pr-[68px] lg:pl-[80px] lg:pr-[80px]   flex justify-center font-dmsans"
       >
         <div className="max-w-[1400px] flex gap-[50px] relative ">
           <p className="m-0 text-[22px] md:text-[26px] lg:text-[36px] gap-[8px] leading-[1.3] ">
